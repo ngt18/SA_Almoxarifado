@@ -29,9 +29,9 @@ async function listarEquipamentos() {
 async function excluirEquipamentos(id){
     try{
         await fetch(`${url}:/excluir/${id}`, {
-            method: "Delete"
+            method: "delete"
         })
-        
+
         listarEquipamentos()
     }catch(error){
         console.log(error)
