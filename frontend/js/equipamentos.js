@@ -24,6 +24,18 @@ async function listarEquipamentos() {
     } catch(error) {
         console.log(error)
     };
+};
+
+async function excluirEquipamentos(id){
+    try{
+        await fetch(`${url}:/excluir/${id}`, {
+            method: "Delete"
+        })
+        
+        listarEquipamentos()
+    }catch(error){
+        console.log(error)
+    }
 }
 
 listarEquipamentos();
